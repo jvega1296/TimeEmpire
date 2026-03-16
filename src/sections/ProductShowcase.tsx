@@ -210,9 +210,17 @@ export default function ProductShowcase() {
                   <span className="font-mono text-2xl md:text-3xl text-cream font-light tracking-wide">
                     {heroWatch.price}
                   </span>
-                  <span className="font-mono text-sm tracking-[0.2em] uppercase text-accent/70 group-hover:text-accent transition-colors duration-500 border border-accent/20 px-6 py-2">
-                    Apartalo Ya
-                  </span>
+                  <button
+                    onClick={() => {
+                      import('../lib/shopify').then(({ redirectToCheckout }) => {
+                        // TODO: Reemplaza con el variant ID real de tu producto en Shopify
+                        redirectToCheckout('SHOPIFY_VARIANT_ID');
+                      });
+                    }}
+                    className="font-mono text-sm tracking-[0.2em] uppercase text-accent/70 hover:text-accent transition-colors duration-500 border border-accent/20 px-6 py-2 cursor-pointer bg-transparent"
+                  >
+                    Apártalo Ya
+                  </button>
                 </div>
               </div>
             </div>
