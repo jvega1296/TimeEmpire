@@ -5,7 +5,7 @@ export default function BrandStory() {
   return (
     <section
       id="story"
-      className="relative min-h-screen flex items-center justify-center py-32 md:py-40"
+      className="relative flex items-center justify-center py-20 md:py-28"
     >
       {/* Subtle background accent */}
       <div className="absolute inset-0 pointer-events-none">
@@ -29,7 +29,7 @@ export default function BrandStory() {
           className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-snug md:leading-tight text-cream/90 tracking-tight"
         />
 
-        <FadeContent delay={0.3} className="mt-16 md:mt-20">
+        <FadeContent delay={0.3} className="mt-10 md:mt-12">
           <div className="flex items-center justify-center gap-8 md:gap-16">
             <div className="w-20 h-px bg-gradient-to-r from-transparent to-accent/20" />
             <span className="font-mono text-xs tracking-[0.3em] uppercase text-gray-500">

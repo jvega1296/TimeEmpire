@@ -89,9 +89,9 @@ export default function Gallery() {
   return (
     <section
       id="gallery"
-      className="py-28 md:py-40 overflow-hidden"
+      className="py-20 md:py-28 overflow-hidden"
     >
-      <div className="max-w-7xl mx-auto px-6 md:px-10 mb-16 md:mb-20">
+      <div className="max-w-7xl mx-auto px-6 md:px-10 mb-10 md:mb-14">
         <FadeContent blur>
           <span className="font-mono text-xs tracking-[0.3em] uppercase text-accent/60 mb-5 block">
             Galería

@@ -44,7 +44,7 @@ export default function Hero() {
         </div>
 
         {/* Watch image */}
-        <div className="mt-14 md:mt-20 relative flex items-center justify-center">
+        <div className="mt-10 md:mt-14 relative flex items-center justify-center">
           {/* Dramatic glow behind watch */}
           <div
             className="absolute inset-0 flex items-center justify-center"
@@ -65,7 +65,7 @@ export default function Hero() {
         {/* CTA */}
         <a
           href="#relojes"
-          className="font-mono mt-14 md:mt-20 text-xs tracking-[0.25em] uppercase text-accent/70 hover:text-accent transition-colors duration-500 border-b border-accent/20 pb-1"
+          className="font-mono mt-8 md:mt-12 text-xs tracking-[0.25em] uppercase text-accent/70 hover:text-accent transition-colors duration-500 border-b border-accent/20 pb-1"
         >
           Explorar Colección
         </a>

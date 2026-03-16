@@ -7,7 +7,7 @@ export default function CallToAction() {
   return (
     <section
       id="purchase"
-      className="relative py-32 md:py-44 overflow-hidden"
+      className="relative py-20 md:py-28 overflow-hidden"
     >
       {/* Background glow */}
       <div className="absolute inset-0 pointer-events-none">
