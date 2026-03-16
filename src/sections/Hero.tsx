@@ -23,7 +23,7 @@ export default function Hero() {
       {/* Content */}
       <div className="relative z-10 text-center px-6 flex flex-col items-center">
         {/* Brand name - Metallic Paint effect */}
-        <div className="w-[90vw] max-w-[500px] h-[160px] sm:max-w-[600px] sm:h-[200px] md:max-w-[800px] md:h-[260px] lg:max-w-[1000px] lg:h-[320px] xl:max-w-[1100px] xl:h-[350px]">
+        <div className="w-[95vw] max-w-[550px] aspect-[4/1] sm:max-w-[700px] md:max-w-[900px] lg:max-w-[1100px]">
           <MetallicPaint
             imageSrc={vegaLogo}
             seed={42}
@@ -32,25 +32,25 @@ export default function Hero() {
             noiseScale={0.5}
             speed={0.18}
             liquid={0.6}
-            brightness={2.8}
-            contrast={0.85}
+            brightness={3.2}
+            contrast={1.0}
             refraction={0.02}
-            blur={0.008}
+            blur={0.006}
             chromaticSpread={1.8}
-            fresnel={2.0}
+            fresnel={2.5}
             angle={0}
             waveAmplitude={1}
             distortion={0.8}
-            contour={0.35}
-            lightColor="#e8dff0"
-            darkColor="#2a2040"
-            tintColor="#8b5cf6"
+            contour={0.4}
+            lightColor="#ffffff"
+            darkColor="#4a3580"
+            tintColor="#7c3aed"
           />
         </div>
 
         {/* Divider line */}
         <div
-          className="w-16 h-px my-4 md:my-6"
+          className="w-16 h-px my-2 md:my-4"
           style={{
             background: 'linear-gradient(90deg, transparent, #3a86ff 50%, #ff006e, transparent)'
           }}
