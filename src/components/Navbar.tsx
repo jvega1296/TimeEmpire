@@ -26,11 +26,16 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 md:px-10 flex items-center justify-between h-16 md:h-20">
-        <a
-          href="#"
-          className="font-mono text-xl md:text-2xl tracking-[0.15em] text-cream"
-        >
-          VEGA
+        <a href="#" className="flex items-center gap-2">
+          <img
+            src={`${import.meta.env.BASE_URL}logo-icon.png`}
+            alt="VEGA"
+            className="h-8 md:h-10"
+            style={{ mixBlendMode: 'screen' }}
+          />
+          <span className="font-mono text-lg md:text-xl tracking-[0.15em] text-cream">
+            VEGA
+          </span>
         </a>
 
         {/* Desktop nav */}

@@ -1,13 +1,12 @@
 import BlurText from '../components/reactbits/BlurText';
 import Aurora from '../components/reactbits/Aurora';
-import ShinyText from '../components/reactbits/ShinyText';
 
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden pt-16 md:pt-20">
       <Aurora />
 
-      {/* Radial spotlight behind the watch */}
+      {/* Radial spotlight */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
         <div
           className="w-[500px] h-[500px] md:w-[700px] md:h-[700px] rounded-full"
@@ -21,27 +20,24 @@ export default function Hero() {
 
       {/* Content */}
       <div className="relative z-10 text-center px-6 flex flex-col items-center">
-        {/* Brand name */}
-        <h1 className="font-serif text-7xl sm:text-8xl md:text-9xl tracking-[0.2em] font-bold">
-          <ShinyText
-            text="VEGA"
-            speed={3}
-            color="#a0a0b0"
-            shineColor="#ffffff"
-            spread={120}
-          />
-        </h1>
+        {/* Logo - full version with icon + VEGA text */}
+        <img
+          src={`${import.meta.env.BASE_URL}logo-full.png`}
+          alt="VEGA"
+          className="w-[280px] sm:w-[350px] md:w-[450px] lg:w-[520px]"
+          style={{ mixBlendMode: 'screen' }}
+        />
 
         {/* Divider line */}
         <div
-          className="w-16 h-px my-4 md:my-6"
+          className="w-16 h-px my-3 md:my-5"
           style={{
             background: 'linear-gradient(90deg, transparent, #3a86ff 50%, #ff006e, transparent)'
           }}
         />
 
         {/* Tagline */}
-        <div className="text-lg sm:text-xl md:text-2xl tracking-[0.25em] uppercase text-gray-400 font-light">
+        <div className="text-base sm:text-lg md:text-xl lg:text-2xl tracking-[0.2em] uppercase text-gray-400 font-light max-w-2xl">
           <BlurText
             text="Para los que nacieron para destacar, no para encajar"
             delay={200}
@@ -50,7 +46,7 @@ export default function Hero() {
         </div>
 
         {/* Watch image */}
-        <div className="mt-10 md:mt-14 relative flex items-center justify-center">
+        <div className="mt-8 md:mt-12 relative flex items-center justify-center">
           <div
             className="absolute inset-0 flex items-center justify-center"
             style={{
@@ -62,7 +58,7 @@ export default function Hero() {
           <img
             src={`${import.meta.env.BASE_URL}watch-hero.png`}
             alt="Who cares I'm already late - Seiko Mod Watch"
-            className="relative w-[320px] md:w-[450px] lg:w-[500px] drop-shadow-[0_0_80px_rgba(58,134,255,0.3)]"
+            className="relative w-[280px] md:w-[400px] lg:w-[450px] drop-shadow-[0_0_80px_rgba(58,134,255,0.3)]"
             style={{ animation: 'pulse-glow 6s ease-in-out infinite' }}
           />
         </div>
@@ -70,7 +66,7 @@ export default function Hero() {
         {/* CTA */}
         <a
           href="#relojes"
-          className="font-mono mt-8 md:mt-12 text-xs tracking-[0.25em] uppercase text-accent/70 hover:text-accent transition-colors duration-500 border-b border-accent/20 pb-1"
+          className="font-mono mt-8 md:mt-10 text-xs tracking-[0.25em] uppercase text-accent/70 hover:text-accent transition-colors duration-500 border-b border-accent/20 pb-1"
         >
           Explorar Colección
         </a>

@@ -5,9 +5,14 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8">
           {/* Brand */}
           <div>
-            <h3 className="font-mono text-2xl tracking-[0.15em] text-cream mb-4">
-              VEGA
-            </h3>
+            <div className="mb-4">
+              <img
+                src={`${import.meta.env.BASE_URL}logo-full.png`}
+                alt="VEGA"
+                className="h-16"
+                style={{ mixBlendMode: 'screen' }}
+              />
+            </div>
             <p className="text-sm text-gray-500 leading-relaxed max-w-xs mb-6">
               Tu destino de lujo en México. Relojes, moda y accesorios exclusivos.
             </p>
