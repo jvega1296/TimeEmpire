@@ -6,7 +6,7 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <h3 className="font-mono text-2xl tracking-[0.15em] text-cream mb-4">
-              TIMEEMPIRE
+              VEGA
             </h3>
             <p className="text-sm text-gray-500 leading-relaxed max-w-xs mb-6">
               Tu destino de lujo en México. Relojes, moda y accesorios exclusivos.
@@ -72,7 +72,7 @@ export default function Footer() {
 
         <div className="mt-16 pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-xs text-gray-600 tracking-wider">
-            &copy; {new Date().getFullYear()} TimeEmpire. Todos los derechos reservados.
+            &copy; {new Date().getFullYear()} VEGA. Todos los derechos reservados.
           </p>
           <div className="flex items-center gap-6">
             {['Privacidad', 'Términos', 'Cookies'].map((item) => (

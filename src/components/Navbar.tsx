@@ -30,7 +30,7 @@ export default function Navbar() {
           href="#"
           className="font-mono text-xl md:text-2xl tracking-[0.15em] text-cream"
         >
-          TIMEEMPIRE
+          VEGA
         </a>
 
         {/* Desktop nav */}

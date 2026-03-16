@@ -23,7 +23,7 @@ export default function Hero() {
       <div className="relative z-10 text-center px-6 flex flex-col items-center">
         {/* Brand name */}
         <h1 className="font-serif text-6xl sm:text-7xl md:text-8xl lg:text-9xl tracking-[0.12em] text-cream mb-2">
-          <SplitText text="TIMEEMPIRE" delay={60} duration={1} />
+          <SplitText text="VEGA" delay={80} duration={1} />
         </h1>
 
         {/* Divider line */}

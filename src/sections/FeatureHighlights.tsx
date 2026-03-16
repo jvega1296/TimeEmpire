@@ -91,7 +91,7 @@ export default function FeatureHighlights() {
             Por Qué Elegirnos
           </span>
           <h2 className="font-serif text-4xl md:text-5xl text-cream tracking-tight">
-            La Experiencia TimeEmpire
+            La Experiencia VEGA
           </h2>
         </FadeContent>
 

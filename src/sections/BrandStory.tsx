@@ -25,7 +25,7 @@ export default function BrandStory() {
         </FadeContent>
 
         <ScrollReveal
-          text="TimeEmpire nació con una idea simple: el lujo no tiene que ser aburrido. Curamos relojes, moda y accesorios para quienes viven con estilo propio. Desde Seiko mods ensamblados a mano hasta piezas de diseñador que hacen voltear cabezas. Tu estilo, tus reglas."
+          text="VEGA nació con una idea simple: el lujo no tiene que ser aburrido. Curamos relojes, moda y accesorios para quienes viven con estilo propio. Desde Seiko mods ensamblados a mano hasta piezas de diseñador que hacen voltear cabezas. Tu estilo, tus reglas."
           className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-snug md:leading-tight text-cream/90 tracking-tight"
         />
 

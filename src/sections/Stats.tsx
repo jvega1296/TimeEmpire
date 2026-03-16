@@ -14,7 +14,7 @@ export default function Stats() {
       <div className="max-w-6xl mx-auto px-6 md:px-10">
         <FadeContent blur className="text-center mb-16 md:mb-24">
           <h2 className="font-serif text-3xl md:text-4xl text-cream tracking-tight">
-            TimeEmpire en Números
+            VEGA en Números
           </h2>
         </FadeContent>
 
