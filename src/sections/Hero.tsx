@@ -37,7 +37,7 @@ export default function Hero() {
         {/* Tagline */}
         <div className="text-lg sm:text-xl md:text-2xl tracking-[0.25em] uppercase text-gray-400 font-light">
           <BlurText
-            text="El lujo ya no es aburrido"
+            text="Para los que nacieron para destacar, no para encajar"
             delay={200}
             stepDuration={0.5}
           />
