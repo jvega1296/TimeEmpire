@@ -1,6 +1,7 @@
-import SplitText from '../components/reactbits/SplitText';
 import BlurText from '../components/reactbits/BlurText';
 import Aurora from '../components/reactbits/Aurora';
+import MetallicPaint from '../components/reactbits/MetallicPaint';
+import vegaLogo from '../assets/vega-logo.svg';
 
 export default function Hero() {
   return (
@@ -21,14 +22,35 @@ export default function Hero() {
 
       {/* Content */}
       <div className="relative z-10 text-center px-6 flex flex-col items-center">
-        {/* Brand name */}
-        <h1 className="font-serif text-6xl sm:text-7xl md:text-8xl lg:text-9xl tracking-[0.12em] text-cream mb-2">
-          <SplitText text="VEGA" delay={80} duration={1} />
-        </h1>
+        {/* Brand name - Metallic Paint effect */}
+        <div className="w-[320px] h-[110px] sm:w-[420px] sm:h-[140px] md:w-[550px] md:h-[180px] lg:w-[650px] lg:h-[210px]">
+          <MetallicPaint
+            imageSrc={vegaLogo}
+            seed={42}
+            scale={4}
+            patternSharpness={1}
+            noiseScale={0.5}
+            speed={0.3}
+            liquid={0.75}
+            brightness={2.2}
+            contrast={0.6}
+            refraction={0.015}
+            blur={0.012}
+            chromaticSpread={2.5}
+            fresnel={1.2}
+            angle={0}
+            waveAmplitude={1}
+            distortion={1}
+            contour={0.2}
+            lightColor="#ffffff"
+            darkColor="#0a0118"
+            tintColor="#3a86ff"
+          />
+        </div>
 
         {/* Divider line */}
         <div
-          className="w-16 h-px my-6 md:my-8"
+          className="w-16 h-px my-4 md:my-6"
           style={{
             background: 'linear-gradient(90deg, transparent, #3a86ff 50%, #ff006e, transparent)'
           }}
