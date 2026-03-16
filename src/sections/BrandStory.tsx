@@ -25,7 +25,7 @@ export default function BrandStory() {
         </FadeContent>
 
         <ScrollReveal
-          text="Cada reloj TimeEmpire nace de una visión. Modificaciones Seiko ensambladas a mano que fusionan la ingeniería japonesa con una expresión audaz e individual. Cada pieza se crea con cuidado, una a la vez, para quienes se niegan a conformarse con lo ordinario. Tu tiempo merece una declaración."
+          text="TimeEmpire nació con una idea simple: el lujo no tiene que ser aburrido. Curamos relojes, moda y accesorios para quienes viven con estilo propio. Desde Seiko mods ensamblados a mano hasta piezas de diseñador que hacen voltear cabezas. Tu estilo, tus reglas."
           className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-snug md:leading-tight text-cream/90 tracking-tight"
         />
 
@@ -33,7 +33,7 @@ export default function BrandStory() {
           <div className="flex items-center justify-center gap-8 md:gap-16">
             <div className="w-20 h-px bg-gradient-to-r from-transparent to-accent/20" />
             <span className="font-mono text-xs tracking-[0.3em] uppercase text-gray-500">
-              Seiko Mods Artesanales
+              Lujo con Personalidad
             </span>
             <div className="w-20 h-px bg-gradient-to-l from-transparent to-accent/20" />
           </div>

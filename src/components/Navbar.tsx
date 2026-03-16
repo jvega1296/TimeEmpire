@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
 
 const navLinks = [
-  { label: 'Colección', href: '#collection' },
-  { label: 'Historia', href: '#story' },
-  { label: 'Detalles', href: '#features' },
-  { label: 'Galería', href: '#gallery' },
+  { label: 'Relojes', href: '#relojes' },
+  { label: 'Moda', href: '#moda' },
+  { label: 'Accesorios', href: '#accesorios' },
+  { label: 'Nosotros', href: '#story' },
 ];
 
 export default function Navbar() {

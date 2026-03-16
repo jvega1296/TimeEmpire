@@ -2,34 +2,40 @@ import FadeContent from '../components/reactbits/FadeContent';
 
 const galleryItems = [
   {
-    title: 'Vista Frontal',
-    subtitle: 'Detalle del Dial',
+    title: 'Seiko Mod',
+    subtitle: 'Who cares I\'m already late',
     gradient: 'from-surface-lighter via-surface-light/40 to-surface',
+    hasImage: true,
   },
   {
-    title: 'Movimiento',
-    subtitle: 'NH35 Automático',
-    gradient: 'from-surface-light via-surface/60 to-black',
+    title: 'Hugo Boss',
+    subtitle: 'Colección Premium',
+    gradient: 'from-accent/15 via-surface-light/40 to-black',
+    hasImage: false,
   },
   {
-    title: 'Perfil',
-    subtitle: 'Arquitectura de la Caja',
-    gradient: 'from-surface-lighter/80 via-surface-light/30 to-black',
+    title: 'Van Cleef',
+    subtitle: 'Trébol Clásico',
+    gradient: 'from-secondary/15 via-surface-light/30 to-black',
+    hasImage: false,
   },
   {
-    title: 'Detalle de Corona',
-    subtitle: 'Corona Atornillada',
-    gradient: 'from-surface-light via-surface-lighter/30 to-surface',
+    title: 'Louis Vuitton',
+    subtitle: 'Accesorios Selectos',
+    gradient: 'from-hot/15 via-surface-lighter/30 to-surface',
+    hasImage: false,
   },
   {
-    title: 'Manecillas y Marcadores',
-    subtitle: 'Elementos Luminosos',
-    gradient: 'from-surface-lighter via-surface-light/40 to-surface',
+    title: 'Versace',
+    subtitle: 'Diseñador Italiano',
+    gradient: 'from-accent/10 via-surface-light/40 to-surface',
+    hasImage: false,
   },
   {
-    title: 'En Muñeca',
-    subtitle: 'Foto de Estilo',
+    title: 'Próximamente',
+    subtitle: 'Nuevas Marcas',
     gradient: 'from-surface-lighter via-surface-light/50 to-surface',
+    hasImage: false,
   },
 ];
 
@@ -43,14 +49,22 @@ function GalleryCard({
       <div
         className={`aspect-[3/4] rounded-2xl bg-gradient-to-b ${item.gradient} border border-white/5 flex items-center justify-center relative overflow-hidden transition-all duration-500 group-hover:border-accent/15`}
       >
-        {/* Watch image */}
-        <div className="w-28 h-28 md:w-36 md:h-36 rounded-full border border-accent/10 flex items-center justify-center">
-          <img
-            src={`${import.meta.env.BASE_URL}watch-hero.png`}
-            alt=""
-            className="w-24 h-24 md:w-32 md:h-32 object-contain"
-          />
-        </div>
+        {/* Content */}
+        {item.hasImage ? (
+          <div className="w-28 h-28 md:w-36 md:h-36 rounded-full border border-accent/10 flex items-center justify-center">
+            <img
+              src={`${import.meta.env.BASE_URL}watch-hero.png`}
+              alt=""
+              className="w-24 h-24 md:w-32 md:h-32 object-contain"
+            />
+          </div>
+        ) : (
+          <div className="text-center px-8">
+            <div className="w-20 h-20 mx-auto mb-6 rounded-full border border-white/10 flex items-center justify-center">
+              <div className="w-12 h-12 rounded-full bg-gradient-to-br from-accent/20 to-hot/20" />
+            </div>
+          </div>
+        )}
 
         {/* Glow */}
         <div
@@ -83,7 +97,7 @@ export default function Gallery() {
             Galería
           </span>
           <h2 className="font-serif text-4xl md:text-5xl text-cream tracking-tight">
-            Cada Ángulo, Cada Detalle
+            Nuestras Marcas
           </h2>
         </FadeContent>
       </div>

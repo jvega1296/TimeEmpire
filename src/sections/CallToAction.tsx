@@ -22,25 +22,24 @@ export default function CallToAction() {
       <div className="relative z-10 max-w-3xl mx-auto px-6 md:px-10 text-center">
         <FadeContent blur>
           <span className="font-mono text-xs tracking-[0.3em] uppercase text-accent/60 mb-8 block">
-            Hazlo Tuyo
+            Tu Siguiente Pieza
           </span>
 
           <h2 className="font-serif text-5xl md:text-6xl lg:text-7xl tracking-tight mb-8">
-            <GradientText>El Tiempo a Tu Manera</GradientText>
+            <GradientText>El Estilo No Espera</GradientText>
           </h2>
 
           <p className="text-base md:text-lg text-gray-400 leading-relaxed max-w-xl mx-auto mb-12 md:mb-16">
-            Seiko mods artesanales hechos uno a la vez. Desde $3,500 MXN.
-            Sé parte de algo diferente.
+            Relojes artesanales, ropa de diseñador y accesorios exclusivos. Todo en un solo lugar. Envíos a todo México.
           </p>
 
           <Magnet magnetStrength={0.2} padding={150}>
             <a
-              href="#collection"
+              href="#relojes"
               className="font-mono inline-flex items-center gap-3 bg-gradient-to-r from-accent to-hot hover:from-accent-muted hover:to-hot text-white px-10 md:px-14 py-4 md:py-5 text-sm tracking-[0.2em] uppercase font-medium transition-all duration-500 group shadow-[0_0_40px_rgba(58,134,255,0.3)]"
             >
               <ShinyText speed={4}>
-                Apártalo Ya
+                Ver Colección Completa
               </ShinyText>
               <svg
                 className="w-4 h-4 transition-transform duration-500 group-hover:translate-x-1"
@@ -59,7 +58,7 @@ export default function CallToAction() {
           </Magnet>
 
           <p className="mt-8 text-xs text-gray-600 tracking-wider">
-            Hecho a mano por pedido &middot; 1 año de garantía &middot; Envíos en México
+            Pago seguro &middot; Envíos a todo México &middot; Atención por WhatsApp
           </p>
         </FadeContent>
       </div>

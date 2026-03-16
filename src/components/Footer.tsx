@@ -8,18 +8,32 @@ export default function Footer() {
             <h3 className="font-mono text-2xl tracking-[0.15em] text-cream mb-4">
               TIMEEMPIRE
             </h3>
-            <p className="text-sm text-gray-500 leading-relaxed max-w-xs">
-              Seiko mods con personalidad. Hechos en México.
+            <p className="text-sm text-gray-500 leading-relaxed max-w-xs mb-6">
+              Tu destino de lujo en México. Relojes, moda y accesorios exclusivos.
             </p>
+            <div className="flex items-center gap-4">
+              {['Instagram', 'TikTok', 'WhatsApp'].map(
+                (item) => (
+                  <a
+                    key={item}
+                    href="#"
+                    className="text-xs text-gray-500 hover:text-accent transition-colors duration-300"
+                    aria-label={item}
+                  >
+                    {item.slice(0, 2)}
+                  </a>
+                ),
+              )}
+            </div>
           </div>
 
-          {/* Connect */}
+          {/* Categories */}
           <div>
             <h4 className="font-mono text-xs tracking-[0.2em] text-gray-400 uppercase mb-5">
-              Síguenos
+              Categorías
             </h4>
             <ul className="space-y-3">
-              {['Instagram', 'TikTok', 'WhatsApp'].map(
+              {['Relojes', 'Moda', 'Accesorios', 'Novedades'].map(
                 (item) => (
                   <li key={item}>
                     <a

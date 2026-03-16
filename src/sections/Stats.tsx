@@ -2,10 +2,10 @@ import Counter from '../components/reactbits/Counter';
 import FadeContent from '../components/reactbits/FadeContent';
 
 const stats = [
-  { value: 8, suffix: '+', label: 'Horas de Ensamblaje' },
-  { value: 150, suffix: '+', label: 'Componentes Individuales' },
-  { value: 28800, suffix: '', label: 'Latidos por Hora' },
-  { value: 100, suffix: 'M', label: 'Resistencia al Agua' },
+  { value: 3, suffix: '', label: 'Categorías' },
+  { value: 10, suffix: '+', label: 'Marcas Premium' },
+  { value: 100, suffix: '%', label: 'Satisfacción' },
+  { value: 24, suffix: 'hrs', label: 'Atención WhatsApp' },
 ];
 
 export default function Stats() {
@@ -14,7 +14,7 @@ export default function Stats() {
       <div className="max-w-6xl mx-auto px-6 md:px-10">
         <FadeContent blur className="text-center mb-16 md:mb-24">
           <h2 className="font-serif text-3xl md:text-4xl text-cream tracking-tight">
-            Precisión en Cada Detalle
+            TimeEmpire en Números
           </h2>
         </FadeContent>
 

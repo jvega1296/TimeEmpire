@@ -37,7 +37,7 @@ export default function Hero() {
         {/* Tagline */}
         <div className="text-lg sm:text-xl md:text-2xl tracking-[0.25em] uppercase text-gray-400 font-light">
           <BlurText
-            text="Seiko mods para gente con estilo y cero paciencia"
+            text="Lujo con actitud. Relojes, moda y accesorios exclusivos."
             delay={200}
             stepDuration={0.5}
           />
@@ -64,10 +64,10 @@ export default function Hero() {
 
         {/* CTA */}
         <a
-          href="#collection"
+          href="#relojes"
           className="font-mono mt-14 md:mt-20 text-xs tracking-[0.25em] uppercase text-accent/70 hover:text-accent transition-colors duration-500 border-b border-accent/20 pb-1"
         >
-          Conoce el Reloj
+          Explorar Colección
         </a>
       </div>
 

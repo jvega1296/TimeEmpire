@@ -2,6 +2,77 @@ import SpotlightCard from '../components/reactbits/SpotlightCard';
 import FadeContent from '../components/reactbits/FadeContent';
 import GradientText from '../components/reactbits/GradientText';
 
+const categories = [
+  {
+    id: 'relojes',
+    icon: (
+      <svg
+        viewBox="0 0 48 48"
+        fill="none"
+        className="w-12 h-12"
+        stroke="currentColor"
+        strokeWidth={1.5}
+      >
+        <circle cx="24" cy="24" r="16" />
+        <circle cx="24" cy="24" r="2" fill="currentColor" />
+        <path d="M24 24L24 14" strokeLinecap="round" />
+        <path d="M24 24L30 28" strokeLinecap="round" />
+        <rect x="18" y="6" width="12" height="4" rx="1" />
+        <rect x="18" y="38" width="12" height="4" rx="1" />
+      </svg>
+    ),
+    title: 'Relojes',
+    subtitle: 'Seiko Mods',
+    description: 'Modificaciones artesanales Seiko con personalidad única. Cada pieza ensamblada a mano.',
+    featured: true,
+    gradient: 'from-accent/10 via-surface-light/40 to-surface',
+    hasImage: true,
+  },
+  {
+    id: 'moda',
+    icon: (
+      <svg
+        viewBox="0 0 48 48"
+        fill="none"
+        className="w-12 h-12"
+        stroke="currentColor"
+        strokeWidth={1.5}
+      >
+        <path d="M16 10L10 16v22c0 2.2 1.8 4 4 4h20c2.2 0 4-1.8 4-4V16l-6-6" />
+        <path d="M10 16h28" />
+        <path d="M32 22c0 4.4-3.6 8-8 8s-8-3.6-8-8" />
+      </svg>
+    ),
+    title: 'Moda',
+    subtitle: 'Ropa de Diseñador',
+    description: 'Piezas seleccionadas de las mejores marcas: Hugo Boss, Louis Vuitton, Versace.',
+    featured: false,
+    gradient: 'from-hot/10 via-surface-light/40 to-surface',
+    hasImage: false,
+  },
+  {
+    id: 'accesorios',
+    icon: (
+      <svg
+        viewBox="0 0 48 48"
+        fill="none"
+        className="w-12 h-12"
+        stroke="currentColor"
+        strokeWidth={1.5}
+      >
+        <path d="M24 6L28 14L36 16L30 22L32 30L24 26L16 30L18 22L12 16L20 14L24 6Z" />
+        <circle cx="24" cy="24" r="4" />
+      </svg>
+    ),
+    title: 'Accesorios',
+    subtitle: 'Joyería y Complementos',
+    description: 'Accesorios de diseñador que complementan tu estilo. Van Cleef & Arpels y más.',
+    featured: false,
+    gradient: 'from-secondary/10 via-surface-light/40 to-surface',
+    hasImage: false,
+  },
+];
+
 const heroWatch = {
   name: 'Who cares I\'m already late',
   tagline: 'Seiko Mod',
@@ -13,19 +84,101 @@ const heroWatch = {
 
 export default function ProductShowcase() {
   return (
-    <section id="collection" className="py-28 md:py-40">
+    <section id="relojes" className="py-28 md:py-40">
       <div className="max-w-7xl mx-auto px-6 md:px-10">
         <FadeContent blur className="text-center mb-20 md:mb-28">
           <span className="font-mono text-xs tracking-[0.3em] uppercase text-accent/60 mb-5 block">
-            La Colección
+            Explorar
           </span>
           <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-cream tracking-tight">
-            <GradientText>Único en su Tipo</GradientText>
+            <GradientText>Nuestras Colecciones</GradientText>
           </h2>
         </FadeContent>
 
-        {/* Hero Product */}
+        {/* Category Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-20 md:mb-28">
+          {categories.map((category, index) => (
+            <FadeContent key={category.id} delay={index * 0.1} direction="up">
+              <SpotlightCard
+                spotlightColor={
+                  category.featured
+                    ? 'rgba(58, 134, 255, 0.12)'
+                    : 'rgba(255, 0, 110, 0.08)'
+                }
+                className={`bg-gradient-to-b ${category.gradient} border border-white/5 rounded-2xl p-8 md:p-10 h-full group cursor-pointer transition-all duration-500 hover:border-accent/15 relative`}
+              >
+                {/* Coming Soon Badge */}
+                {!category.featured && (
+                  <div className="absolute top-6 right-6">
+                    <span className="font-mono text-[10px] tracking-[0.2em] uppercase text-accent/60 bg-accent/5 px-3 py-1 border border-accent/20 rounded-full">
+                      Próximamente
+                    </span>
+                  </div>
+                )}
+
+                <div className="flex flex-col h-full">
+                  {/* Icon or Image */}
+                  <div className="mb-6 flex items-center justify-center">
+                    {category.hasImage ? (
+                      <div className="w-32 h-32 flex items-center justify-center">
+                        <img
+                          src={`${import.meta.env.BASE_URL}watch-hero.png`}
+                          alt={category.title}
+                          className="w-28 h-28 object-contain drop-shadow-[0_0_30px_rgba(58,134,255,0.2)]"
+                        />
+                      </div>
+                    ) : (
+                      <div className="w-32 h-32 rounded-full border border-white/5 flex items-center justify-center bg-gradient-to-br from-white/5 to-transparent text-accent/40 group-hover:text-accent/70 transition-colors duration-500">
+                        {category.icon}
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Content */}
+                  <div className="text-center flex-1 flex flex-col">
+                    <h3 className="font-serif text-2xl md:text-3xl text-cream mb-2">
+                      {category.title}
+                    </h3>
+                    <span className="font-mono text-xs tracking-[0.25em] uppercase text-accent/70 mb-4">
+                      {category.subtitle}
+                    </span>
+                    <p className="text-sm text-gray-400 leading-relaxed flex-1">
+                      {category.description}
+                    </p>
+
+                    {/* Featured product price */}
+                    {category.featured && (
+                      <div className="mt-6">
+                        <span className="font-mono text-lg text-cream/80">
+                          Desde $3,500 MXN
+                        </span>
+                      </div>
+                    )}
+
+                    {/* CTA */}
+                    <div className="mt-6">
+                      <span className="font-mono text-xs tracking-[0.2em] uppercase text-accent/60 group-hover:text-accent transition-colors duration-500 border-b border-accent/20 pb-1 inline-block">
+                        {category.featured ? 'Ver más' : 'Notificarme'}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </SpotlightCard>
+            </FadeContent>
+          ))}
+        </div>
+
+        {/* Featured Watch Product */}
         <FadeContent direction="up" className="mb-16">
+          <div className="text-center mb-12">
+            <span className="font-mono text-xs tracking-[0.3em] uppercase text-accent/60 mb-3 block">
+              Producto Destacado
+            </span>
+            <h3 className="font-serif text-3xl md:text-4xl text-cream tracking-tight">
+              Nuestro Ícono
+            </h3>
+          </div>
+
           <SpotlightCard
             spotlightColor="rgba(58, 134, 255, 0.12)"
             className={`bg-gradient-to-b ${heroWatch.accent} border border-white/5 rounded-3xl p-10 md:p-16 group cursor-pointer transition-all duration-500 hover:border-accent/15`}
@@ -64,31 +217,6 @@ export default function ProductShowcase() {
               </div>
             </div>
           </SpotlightCard>
-        </FadeContent>
-
-        {/* Coming Soon Teaser */}
-        <FadeContent delay={0.2} className="text-center">
-          <div className="border border-white/5 rounded-2xl p-12 md:p-16 bg-gradient-to-b from-surface-lighter/10 to-transparent">
-            <div className="max-w-xl mx-auto">
-              <span className="font-mono text-xs tracking-[0.3em] uppercase text-accent/50 mb-4 block">
-                Próximamente
-              </span>
-              <h3 className="font-serif text-2xl md:text-3xl text-cream/70 mb-4">
-                Más Creaciones Únicas
-              </h3>
-              <p className="text-sm text-gray-600 leading-relaxed">
-                Cada reloj TimeEmpire es una obra de arte limitada. Nuevos Seiko mods próximamente. Únete a nuestra lista para enterarte primero.
-              </p>
-              <div className="mt-6">
-                <a
-                  href="#purchase"
-                  className="font-mono text-xs tracking-[0.25em] uppercase text-accent/60 hover:text-accent transition-colors duration-500 border-b border-accent/20 pb-1"
-                >
-                  Avísame
-                </a>
-              </div>
-            </div>
-          </div>
         </FadeContent>
       </div>
     </section>
