@@ -35,11 +35,13 @@ export default function CallToAction() {
 
           <Magnet magnetStrength={0.2} padding={150}>
             <a
-              href="#relojes"
+              href="https://wa.me/521TUNUMERO?text=Hola%2C%20me%20interesa%20un%20reloj%20VEGA"
+              target="_blank"
+              rel="noopener noreferrer"
               className="font-mono inline-flex items-center gap-3 bg-gradient-to-r from-accent to-hot hover:from-accent-muted hover:to-hot text-white px-10 md:px-14 py-4 md:py-5 text-sm tracking-[0.2em] uppercase font-medium transition-all duration-500 group shadow-[0_0_40px_rgba(58,134,255,0.3)]"
             >
               <ShinyText
-                text="Ver Colección Completa"
+                text="Contáctanos por WhatsApp"
                 speed={4}
                 color="#ffffff"
                 shineColor="#ffffff"

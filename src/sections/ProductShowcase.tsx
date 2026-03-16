@@ -217,7 +217,7 @@ export default function ProductShowcase() {
                         redirectToCheckout('SHOPIFY_VARIANT_ID');
                       });
                     }}
-                    className="font-mono text-sm tracking-[0.2em] uppercase text-accent/70 hover:text-accent transition-colors duration-500 border border-accent/20 px-6 py-2 cursor-pointer bg-transparent"
+                    className="font-mono text-sm tracking-[0.2em] uppercase text-white bg-accent hover:bg-accent-muted transition-all duration-300 px-8 py-3.5 cursor-pointer shadow-[0_0_30px_rgba(58,134,255,0.25)]"
                   >
                     Apártalo Ya
                   </button>

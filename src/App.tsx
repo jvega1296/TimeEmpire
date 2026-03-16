@@ -5,7 +5,6 @@ import BrandStory from './sections/BrandStory';
 import ProductShowcase from './sections/ProductShowcase';
 import FeatureHighlights from './sections/FeatureHighlights';
 import Gallery from './sections/Gallery';
-import Stats from './sections/Stats';
 import CallToAction from './sections/CallToAction';
 
 export default function App() {
@@ -14,11 +13,10 @@ export default function App() {
       <Navbar />
       <main>
         <Hero />
-        <BrandStory />
         <ProductShowcase />
+        <BrandStory />
         <FeatureHighlights />
         <Gallery />
-        <Stats />
         <CallToAction />
       </main>
       <Footer />

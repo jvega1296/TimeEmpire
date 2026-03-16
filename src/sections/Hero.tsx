@@ -19,56 +19,48 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 text-center px-6 flex flex-col items-center">
-        {/* Logo - full version with icon + VEGA text */}
+      <div className="relative z-10 text-center px-6 flex flex-col items-center max-w-3xl">
+        {/* Logo */}
         <img
           src={`${import.meta.env.BASE_URL}logo-full.png`}
           alt="VEGA"
-          className="w-[280px] sm:w-[350px] md:w-[450px] lg:w-[520px]"
+          className="w-[200px] sm:w-[250px] md:w-[320px] mb-8 md:mb-12"
         />
 
-        {/* Divider line */}
-        <div
-          className="w-16 h-px my-3 md:my-5"
-          style={{
-            background: 'linear-gradient(90deg, transparent, #3a86ff 50%, #ff006e, transparent)'
-          }}
-        />
+        {/* Product name as headline */}
+        <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-cream tracking-tight leading-tight mb-5">
+          <BlurText
+            text={`"Who cares I'm already late"`}
+            delay={120}
+            stepDuration={0.4}
+          />
+        </h1>
 
         {/* Tagline */}
-        <div className="text-base sm:text-lg md:text-xl lg:text-2xl tracking-[0.2em] uppercase text-gray-400 font-light max-w-2xl">
-          <BlurText
-            text="Para los que nacieron para destacar, no para encajar"
-            delay={200}
-            stepDuration={0.5}
-          />
-        </div>
+        <p className="text-base sm:text-lg md:text-xl tracking-wide text-gray-400 font-light mb-3">
+          Seiko Mod artesanal — ensamblado a mano en México
+        </p>
 
-        {/* Watch image */}
-        <div className="mt-8 md:mt-12 relative flex items-center justify-center">
-          <div
-            className="absolute inset-0 flex items-center justify-center"
-            style={{
-              background:
-                'radial-gradient(ellipse 70% 80% at 50% 50%, rgba(58,134,255,0.15), rgba(255,0,110,0.08), transparent)',
-              filter: 'blur(40px)',
-            }}
-          />
-          <img
-            src={`${import.meta.env.BASE_URL}watch-hero.png`}
-            alt="Who cares I'm already late - Seiko Mod Watch"
-            className="relative w-[280px] md:w-[400px] lg:w-[450px] drop-shadow-[0_0_80px_rgba(58,134,255,0.3)]"
-            style={{ animation: 'pulse-glow 6s ease-in-out infinite' }}
-          />
-        </div>
+        {/* Price */}
+        <span className="font-mono text-xl md:text-2xl text-cream/90 tracking-wide mb-8 md:mb-10 block">
+          $3,500 MXN
+        </span>
 
-        {/* CTA */}
+        {/* Primary CTA */}
         <a
           href="#relojes"
-          className="font-mono mt-8 md:mt-10 text-xs tracking-[0.25em] uppercase text-accent/70 hover:text-accent transition-colors duration-500 border-b border-accent/20 pb-1"
+          className="font-mono inline-flex items-center gap-3 bg-accent hover:bg-accent-muted text-white px-10 md:px-14 py-4 md:py-5 text-sm tracking-[0.2em] uppercase font-medium transition-all duration-300 shadow-[0_0_40px_rgba(58,134,255,0.25)] hover:shadow-[0_0_60px_rgba(58,134,255,0.35)]"
         >
-          Explorar Colección
+          Ver el Reloj
+          <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+          </svg>
         </a>
+
+        {/* Secondary tagline */}
+        <p className="mt-6 font-mono text-xs tracking-[0.2em] uppercase text-gray-600">
+          Para los que nacieron para destacar, no para encajar
+        </p>
       </div>
 
       {/* Scroll indicator */}
@@ -80,7 +72,7 @@ export default function Hero() {
           className="w-px h-8"
           style={{
             background: 'linear-gradient(to bottom, rgba(58,134,255,0.4), transparent)',
-            animation: 'scroll-hint 2.5s ease-in-out infinite'
+            animation: 'scroll-hint 2.5s ease-in-out infinite',
           }}
         />
       </div>
