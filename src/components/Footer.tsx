@@ -10,7 +10,6 @@ export default function Footer() {
                 src={`${import.meta.env.BASE_URL}logo-full.png`}
                 alt="VEGA"
                 className="h-16"
-                style={{ mixBlendMode: 'screen' }}
               />
             </div>
             <p className="text-sm text-gray-500 leading-relaxed max-w-xs mb-6">

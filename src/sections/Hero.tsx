@@ -25,7 +25,6 @@ export default function Hero() {
           src={`${import.meta.env.BASE_URL}logo-full.png`}
           alt="VEGA"
           className="w-[280px] sm:w-[350px] md:w-[450px] lg:w-[520px]"
-          style={{ mixBlendMode: 'screen' }}
         />
 
         {/* Divider line */}

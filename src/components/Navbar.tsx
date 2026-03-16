@@ -31,7 +31,6 @@ export default function Navbar() {
             src={`${import.meta.env.BASE_URL}logo-icon.png`}
             alt="VEGA"
             className="h-8 md:h-10"
-            style={{ mixBlendMode: 'screen' }}
           />
           <span className="font-mono text-lg md:text-xl tracking-[0.15em] text-cream">
             VEGA
