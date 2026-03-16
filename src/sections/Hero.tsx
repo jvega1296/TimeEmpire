@@ -19,48 +19,48 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 text-center px-6 flex flex-col items-center max-w-3xl">
+      <div className="relative z-10 text-center px-6 flex flex-col items-center max-w-4xl">
         {/* Logo */}
         <img
           src={`${import.meta.env.BASE_URL}logo-full.png`}
           alt="VEGA"
-          className="w-[200px] sm:w-[250px] md:w-[320px] mb-8 md:mb-12"
+          className="w-[220px] sm:w-[280px] md:w-[360px] mb-10 md:mb-14"
         />
 
-        {/* Product name as headline */}
-        <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-cream tracking-tight leading-tight mb-5">
+        {/* Brand headline */}
+        <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-cream tracking-tight leading-tight mb-6">
           <BlurText
-            text={`"Who cares I'm already late"`}
-            delay={120}
-            stepDuration={0.4}
+            text="Para los que nacieron para destacar, no para encajar"
+            delay={100}
+            stepDuration={0.35}
           />
         </h1>
 
-        {/* Tagline */}
-        <p className="text-base sm:text-lg md:text-xl tracking-wide text-gray-400 font-light mb-3">
-          Seiko Mod artesanal — ensamblado a mano en México
+        {/* Brand positioning */}
+        <p className="text-base sm:text-lg md:text-xl tracking-wide text-gray-400 font-light mb-10 md:mb-12 max-w-2xl">
+          Lujo curado con actitud. Relojes, moda y accesorios que dicen lo que las palabras no pueden.
         </p>
-
-        {/* Price */}
-        <span className="font-mono text-xl md:text-2xl text-cream/90 tracking-wide mb-8 md:mb-10 block">
-          $3,500 MXN
-        </span>
 
         {/* Primary CTA */}
         <a
           href="#relojes"
           className="font-mono inline-flex items-center gap-3 bg-accent hover:bg-accent-muted text-white px-10 md:px-14 py-4 md:py-5 text-sm tracking-[0.2em] uppercase font-medium transition-all duration-300 shadow-[0_0_40px_rgba(58,134,255,0.25)] hover:shadow-[0_0_60px_rgba(58,134,255,0.35)]"
         >
-          Ver el Reloj
+          Explorar la Colección
           <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
             <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
           </svg>
         </a>
 
-        {/* Secondary tagline */}
-        <p className="mt-6 font-mono text-xs tracking-[0.2em] uppercase text-gray-600">
-          Para los que nacieron para destacar, no para encajar
-        </p>
+        {/* Category hints */}
+        <div className="mt-8 flex items-center gap-4 md:gap-6">
+          {['Relojes', 'Moda', 'Accesorios'].map((cat, i) => (
+            <span key={cat} className="flex items-center gap-4 md:gap-6">
+              {i > 0 && <span className="text-accent/30 text-xs">&#x2022;</span>}
+              <span className="font-mono text-[11px] tracking-[0.2em] uppercase text-gray-500">{cat}</span>
+            </span>
+          ))}
+        </div>
       </div>
 
       {/* Scroll indicator */}

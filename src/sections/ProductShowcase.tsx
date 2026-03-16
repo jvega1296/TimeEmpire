@@ -26,7 +26,7 @@ const categories = [
     description: 'Modificaciones artesanales Seiko con personalidad única. Cada pieza ensamblada a mano.',
     featured: true,
     gradient: 'from-accent/10 via-surface-light/40 to-surface',
-    hasImage: true,
+    hasImage: false,
   },
   {
     id: 'moda',
@@ -175,7 +175,7 @@ export default function ProductShowcase() {
               Producto Destacado
             </span>
             <h3 className="font-serif text-3xl md:text-4xl text-cream tracking-tight">
-              Nuestro Ícono
+              La Pieza que Inició Todo
             </h3>
           </div>
 
