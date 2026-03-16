@@ -84,7 +84,7 @@ const heroWatch = {
 
 export default function ProductShowcase() {
   return (
-    <section id="relojes" className="py-20 md:py-28">
+    <section id="relojes" className="py-20 md:py-28 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 md:px-10">
         <FadeContent blur className="text-center mb-12 md:mb-16">
           <span className="font-mono text-xs tracking-[0.3em] uppercase text-accent/60 mb-5 block">

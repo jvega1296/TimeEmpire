@@ -83,7 +83,7 @@ export default function FeatureHighlights() {
   return (
     <section
       id="features"
-      className="py-20 md:py-28 border-t border-white/5"
+      className="py-20 md:py-28 border-t border-white/5 overflow-hidden"
     >
       <div className="max-w-6xl mx-auto px-6 md:px-10">
         <FadeContent blur className="text-center mb-12 md:mb-16">

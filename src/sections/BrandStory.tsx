@@ -5,7 +5,7 @@ export default function BrandStory() {
   return (
     <section
       id="story"
-      className="relative flex items-center justify-center py-20 md:py-28"
+      className="relative flex items-center justify-center py-20 md:py-28 overflow-hidden"
     >
       {/* Subtle background accent */}
       <div className="absolute inset-0 pointer-events-none">
