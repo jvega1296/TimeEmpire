@@ -1,7 +1,6 @@
 import BlurText from '../components/reactbits/BlurText';
 import Aurora from '../components/reactbits/Aurora';
-import MetallicPaint from '../components/reactbits/MetallicPaint';
-import vegaLogo from '../assets/vega-logo.svg';
+import ShinyText from '../components/reactbits/ShinyText';
 
 export default function Hero() {
   return (
@@ -22,35 +21,20 @@ export default function Hero() {
 
       {/* Content */}
       <div className="relative z-10 text-center px-6 flex flex-col items-center">
-        {/* Brand name - Metallic Paint effect */}
-        <div className="w-[85vw] max-w-[380px] aspect-[4/1] sm:max-w-[450px] md:max-w-[600px] lg:max-w-[750px]">
-          <MetallicPaint
-            imageSrc={vegaLogo}
-            seed={42}
-            scale={3}
-            patternSharpness={1.2}
-            noiseScale={0.5}
-            speed={0.18}
-            liquid={0.6}
-            brightness={1.6}
-            contrast={1.2}
-            refraction={0.02}
-            blur={0.006}
-            chromaticSpread={1.8}
-            fresnel={2.5}
-            angle={0}
-            waveAmplitude={1}
-            distortion={0.8}
-            contour={0.4}
-            lightColor="#ffffff"
-            darkColor="#6d4db3"
-            tintColor="#7c3aed"
+        {/* Brand name */}
+        <h1 className="font-serif text-7xl sm:text-8xl md:text-9xl tracking-[0.2em] font-bold">
+          <ShinyText
+            text="VEGA"
+            speed={3}
+            color="#a0a0b0"
+            shineColor="#ffffff"
+            spread={120}
           />
-        </div>
+        </h1>
 
         {/* Divider line */}
         <div
-          className="w-16 h-px my-2 md:my-4"
+          className="w-16 h-px my-4 md:my-6"
           style={{
             background: 'linear-gradient(90deg, transparent, #3a86ff 50%, #ff006e, transparent)'
           }}
@@ -67,7 +51,6 @@ export default function Hero() {
 
         {/* Watch image */}
         <div className="mt-10 md:mt-14 relative flex items-center justify-center">
-          {/* Dramatic glow behind watch */}
           <div
             className="absolute inset-0 flex items-center justify-center"
             style={{

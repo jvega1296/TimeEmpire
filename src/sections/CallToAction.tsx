@@ -38,9 +38,12 @@ export default function CallToAction() {
               href="#relojes"
               className="font-mono inline-flex items-center gap-3 bg-gradient-to-r from-accent to-hot hover:from-accent-muted hover:to-hot text-white px-10 md:px-14 py-4 md:py-5 text-sm tracking-[0.2em] uppercase font-medium transition-all duration-500 group shadow-[0_0_40px_rgba(58,134,255,0.3)]"
             >
-              <ShinyText speed={4}>
-                Ver Colección Completa
-              </ShinyText>
+              <ShinyText
+                text="Ver Colección Completa"
+                speed={4}
+                color="#ffffff"
+                shineColor="#ffffff"
+              />
               <svg
                 className="w-4 h-4 transition-transform duration-500 group-hover:translate-x-1"
                 fill="none"
