@@ -41,7 +41,7 @@ export default function ScrollReveal({
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ['start 90%', 'end 50%'],
+    offset: ['start 95%', 'end 60%'],
   });
 
   const words = text.split(' ');
