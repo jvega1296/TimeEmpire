@@ -55,7 +55,7 @@ export default function Hero() {
             }}
           />
           <img
-            src="/watch-hero.png"
+            src={`${import.meta.env.BASE_URL}watch-hero.png`}
             alt="Who cares I'm already late - Seiko Mod Watch"
             className="relative w-[320px] md:w-[450px] lg:w-[500px] drop-shadow-[0_0_80px_rgba(58,134,255,0.3)]"
             style={{ animation: 'pulse-glow 6s ease-in-out infinite' }}

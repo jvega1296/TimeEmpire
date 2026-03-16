@@ -34,7 +34,7 @@ export default function ProductShowcase() {
               {/* Left: Watch Image */}
               <div className="flex items-center justify-center">
                 <img
-                  src="/watch-hero.png"
+                  src={`${import.meta.env.BASE_URL}watch-hero.png`}
                   alt="Who cares I'm already late"
                   className="w-full max-w-[350px] mx-auto drop-shadow-[0_0_60px_rgba(58,134,255,0.25)]"
                 />

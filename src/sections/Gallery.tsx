@@ -46,7 +46,7 @@ function GalleryCard({
         {/* Watch image */}
         <div className="w-28 h-28 md:w-36 md:h-36 rounded-full border border-accent/10 flex items-center justify-center">
           <img
-            src="/watch-hero.png"
+            src={`${import.meta.env.BASE_URL}watch-hero.png`}
             alt=""
             className="w-24 h-24 md:w-32 md:h-32 object-contain"
           />
