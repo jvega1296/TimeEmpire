@@ -32,8 +32,8 @@ export default function Hero() {
             noiseScale={0.5}
             speed={0.18}
             liquid={0.6}
-            brightness={3.2}
-            contrast={1.0}
+            brightness={1.6}
+            contrast={1.2}
             refraction={0.02}
             blur={0.006}
             chromaticSpread={1.8}
@@ -43,7 +43,7 @@ export default function Hero() {
             distortion={0.8}
             contour={0.4}
             lightColor="#ffffff"
-            darkColor="#4a3580"
+            darkColor="#6d4db3"
             tintColor="#7c3aed"
           />
         </div>

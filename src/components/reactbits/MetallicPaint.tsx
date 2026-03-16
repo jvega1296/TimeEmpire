@@ -247,7 +247,6 @@ export default function MetallicPaint({
     gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, imgData.width, imgData.height, 0, gl.RGBA, gl.UNSIGNED_BYTE, new Uint8Array(imgData.data.buffer));
     gl.uniform1i(uniforms.u_tex, 0);
     gl.uniform1f(uniforms.u_imgRatio, imgData.width / imgData.height);
-    gl.uniform1f(uniforms.u_ratio, 1);
 
     textureRef.current = tex;
     imgDataRef.current = imgData;
@@ -258,12 +257,29 @@ export default function MetallicPaint({
     const canvas = canvasRef.current;
     const gl = glRef.current;
     if (!canvas || !gl) return;
-    const side = 1000 * devicePixelRatio;
-    canvas.width = side;
-    canvas.height = side;
-    gl.viewport(0, 0, side, side);
+
+    const updateSize = () => {
+      const parent = canvas.parentElement;
+      if (!parent || !glRef.current) return;
+      const rect = parent.getBoundingClientRect();
+      const w = Math.round(rect.width * devicePixelRatio);
+      const h = Math.round(rect.height * devicePixelRatio);
+      if (w > 0 && h > 0) {
+        canvas.width = w;
+        canvas.height = h;
+        glRef.current.viewport(0, 0, w, h);
+        const u = uniformsRef.current;
+        glRef.current.uniform1f(u.u_ratio, w / h);
+      }
+    };
+
+    updateSize();
+    const observer = new ResizeObserver(updateSize);
+    if (canvas.parentElement) observer.observe(canvas.parentElement);
     setReady(true);
+
     return () => {
+      observer.disconnect();
       if (rafRef.current) cancelAnimationFrame(rafRef.current);
       if (textureRef.current && glRef.current) glRef.current.deleteTexture(textureRef.current);
     };
