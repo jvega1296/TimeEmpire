@@ -23,7 +23,7 @@ export default function Hero() {
       {/* Content */}
       <div className="relative z-10 text-center px-6 flex flex-col items-center">
         {/* Brand name - Metallic Paint effect */}
-        <div className="w-[95vw] max-w-[550px] aspect-[4/1] sm:max-w-[700px] md:max-w-[900px] lg:max-w-[1100px]">
+        <div className="w-[85vw] max-w-[380px] aspect-[4/1] sm:max-w-[450px] md:max-w-[600px] lg:max-w-[750px]">
           <MetallicPaint
             imageSrc={vegaLogo}
             seed={42}
