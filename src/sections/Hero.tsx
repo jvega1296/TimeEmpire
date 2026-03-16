@@ -23,28 +23,28 @@ export default function Hero() {
       {/* Content */}
       <div className="relative z-10 text-center px-6 flex flex-col items-center">
         {/* Brand name - Metallic Paint effect */}
-        <div className="w-[320px] h-[110px] sm:w-[420px] sm:h-[140px] md:w-[550px] md:h-[180px] lg:w-[650px] lg:h-[210px]">
+        <div className="w-[90vw] max-w-[500px] h-[160px] sm:max-w-[600px] sm:h-[200px] md:max-w-[800px] md:h-[260px] lg:max-w-[1000px] lg:h-[320px] xl:max-w-[1100px] xl:h-[350px]">
           <MetallicPaint
             imageSrc={vegaLogo}
             seed={42}
-            scale={4}
-            patternSharpness={1}
+            scale={3}
+            patternSharpness={1.2}
             noiseScale={0.5}
-            speed={0.3}
-            liquid={0.75}
-            brightness={2.2}
-            contrast={0.6}
-            refraction={0.015}
-            blur={0.012}
-            chromaticSpread={2.5}
-            fresnel={1.2}
+            speed={0.18}
+            liquid={0.6}
+            brightness={2.8}
+            contrast={0.85}
+            refraction={0.02}
+            blur={0.008}
+            chromaticSpread={1.8}
+            fresnel={2.0}
             angle={0}
             waveAmplitude={1}
-            distortion={1}
-            contour={0.2}
-            lightColor="#ffffff"
-            darkColor="#0a0118"
-            tintColor="#3a86ff"
+            distortion={0.8}
+            contour={0.35}
+            lightColor="#e8dff0"
+            darkColor="#2a2040"
+            tintColor="#8b5cf6"
           />
         </div>
 
