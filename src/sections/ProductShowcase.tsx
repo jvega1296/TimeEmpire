@@ -218,6 +218,71 @@ export default function ProductShowcase() {
             </div>
           </SpotlightCard>
         </FadeContent>
+
+        {/* Watch Specs */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 mt-16">
+          {[
+            {
+              icon: (
+                <svg viewBox="0 0 48 48" fill="none" className="w-8 h-8" stroke="currentColor" strokeWidth={1.2}>
+                  <circle cx="24" cy="24" r="18" />
+                  <circle cx="24" cy="24" r="6" />
+                  <path d="M24 6v6M24 36v6M6 24h6M36 24h6" />
+                </svg>
+              ),
+              title: 'Movimiento NH35',
+              detail: 'Automático japonés · 41hrs reserva de marcha',
+            },
+            {
+              icon: (
+                <svg viewBox="0 0 48 48" fill="none" className="w-8 h-8" stroke="currentColor" strokeWidth={1.2}>
+                  <path d="M24 4L4 18v12l20 14 20-14V18L24 4z" />
+                  <path d="M24 4v28M4 18l20 14M44 18L24 32" />
+                </svg>
+              ),
+              title: 'Cristal de Zafiro',
+              detail: 'Resistente a rayaduras · Capa antirreflejante',
+            },
+            {
+              icon: (
+                <svg viewBox="0 0 48 48" fill="none" className="w-8 h-8" stroke="currentColor" strokeWidth={1.2}>
+                  <path d="M8 36c0 0 4-8 16-8s16 8 16 8" />
+                  <path d="M12 30c0 0 3-6 12-6s12 6 12 6" />
+                  <path d="M16 24c0 0 2-4 8-4s8 4 8 4" />
+                  <circle cx="24" cy="40" r="3" />
+                </svg>
+              ),
+              title: '100M Resistencia',
+              detail: 'Corona atornillada · Apto para natación',
+            },
+            {
+              icon: (
+                <svg viewBox="0 0 48 48" fill="none" className="w-8 h-8" stroke="currentColor" strokeWidth={1.2}>
+                  <rect x="8" y="8" width="32" height="32" rx="4" />
+                  <path d="M8 24h32M24 8v32" />
+                  <circle cx="16" cy="16" r="2" fill="currentColor" />
+                  <circle cx="32" cy="32" r="2" fill="currentColor" />
+                </svg>
+              ),
+              title: 'Dial Personalizado',
+              detail: 'Ensamblado a mano · Pieza única',
+            },
+          ].map((spec, i) => (
+            <FadeContent key={spec.title} delay={i * 0.1} direction="up">
+              <div className="text-center p-6 border border-white/5 rounded-xl bg-gradient-to-b from-white/[0.02] to-transparent group hover:border-accent/10 transition-all duration-500">
+                <div className="text-accent/50 group-hover:text-accent/80 transition-colors duration-500 flex justify-center mb-4">
+                  {spec.icon}
+                </div>
+                <h4 className="font-mono text-sm text-cream tracking-wide mb-2">
+                  {spec.title}
+                </h4>
+                <p className="text-xs text-gray-500 leading-relaxed">
+                  {spec.detail}
+                </p>
+              </div>
+            </FadeContent>
+          ))}
+        </div>
       </div>
     </section>
   );
